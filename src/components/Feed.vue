@@ -10,19 +10,19 @@
       >
         <div class="article-meta">
           <router-link
-            :to="{name: 'userProfile', params: {slug: article.autor.username}}"
+            :to="{name: 'userProfile', params: {slug: article.author.username}}"
           >
-            <img :src="article.autor.image" />
+            <img :src="article.author.image" />
           </router-link>
           <div class="info">
             <router-link
               :to="{
                 name: 'userProfile',
-                params: {slug: article.autor.username},
+                params: {slug: article.author.username},
               }"
-              class="autor"
+              class="author"
             >
-              {{ article.autor.username }}
+              {{ article.author.username }}
             </router-link>
             <span class="date">{{ article.createAt }}</span>
           </div>
@@ -33,17 +33,17 @@
           class="preview-link"
         >
           <h1>{{ article.title }}</h1>
-          <p>{{ arcitle.description }}</p>
+          <p>{{ article.description }}</p>
           <span>Read more...</span>
           TAG LIST
         </router-link>
-        <app-pagination
-          :total="feed.articlesCount"
-          :limit="limit"
-          :current-page="currentPage"
-          :url="baseUrl"
-        />
       </div>
+      <app-pagination
+        :total="feed.articlesCount"
+        :limit="limit"
+        :current-page="currentPage"
+        :url="baseUrl"
+      />
     </div>
   </div>
 </template>
