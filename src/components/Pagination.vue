@@ -1,7 +1,7 @@
 <template>
   <ul class="pagination">
     <li
-      :v-for="page in pages"
+      v-for="page in pages"
       :key="page"
       class="page-item"
       :class="{active: currentPage === page}"

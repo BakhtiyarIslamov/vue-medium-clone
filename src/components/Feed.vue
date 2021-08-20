@@ -24,7 +24,7 @@
             >
               {{ article.author.username }}
             </router-link>
-            <span class="date">{{ article.createAt }}</span>
+            <span class="date">{{ article.createdAt }}</span>
           </div>
           <div class="pull-xs-right">ADD TO FAVOURITES</div>
         </div>
