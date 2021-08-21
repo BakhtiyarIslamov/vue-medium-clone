@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div v-if="isLoading">Loading...</div>
-    <div v-if="error">Something bad happened</div>
+    <app-loading v-if="isLoading" />
+    <app-error-message v-if="error" />
     <div class="sidebar" v-if="popularTags">
       <p>Popular Tags</p>
       <div class="tag-list">
@@ -21,6 +21,8 @@
 <script>
 import {mapState} from 'vuex';
 import {actionTypes} from '@/store/modules/popularTags.js';
+import AppLoading from '@/components/Loading.vue';
+import AppErrorMessage from '@/components/ErrorMessage.vue';
 
 export default {
   name: 'AppPopularTags',
@@ -30,6 +32,10 @@ export default {
       error: (state) => state.popularTags.error,
       popularTags: (state) => state.popularTags.data,
     }),
+  },
+  components: {
+    AppLoading,
+    AppErrorMessage,
   },
   mounted() {
     this.$store.dispatch(actionTypes.getPopularTags);

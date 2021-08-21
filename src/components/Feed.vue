@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div v-if="isLoading">Loading...</div>
-    <div v-if="error">Something bad happend</div>
+    <app-loading v-if="isLoading" />
+    <app-error-message v-if="error" />
     <div v-if="feed">
       <div
         class="article-preview"
@@ -54,6 +54,8 @@ import {actionTypes} from '@/store/modules/feed.js';
 import AppPagination from '@/components/Pagination.vue';
 import {limit} from '@/helpers/variables.js';
 import {stringify, parseUrl} from 'query-string';
+import AppLoading from '@/components/Loading.vue';
+import AppErrorMessage from '@/components/ErrorMessage.vue';
 
 export default {
   name: 'AppFeed',
@@ -65,6 +67,8 @@ export default {
   },
   components: {
     AppPagination,
+    AppLoading,
+    AppErrorMessage,
   },
   data() {
     return {
