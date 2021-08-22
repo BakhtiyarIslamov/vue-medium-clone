@@ -4,6 +4,7 @@ import Register from '@/views/Register.vue';
 import Login from '@/views/Login.vue';
 import YourFeed from '@/views/YourFeed.vue';
 import TagFeed from '@/views/TagFeed.vue';
+import Article from '@/views/Article.vue';
 
 const routes = [
   {
@@ -39,7 +40,7 @@ const routes = [
   {
     path: '/articles/:slug',
     name: 'article',
-    component: GlobalFeed,
+    component: Article,
   },
   {
     path: '/articles/:slug/edit',
