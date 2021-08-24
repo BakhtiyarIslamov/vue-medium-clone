@@ -1,6 +1,6 @@
 # mediumclone_vue
 
-# Git
+Fronted realisation of https://demo.realworld.io/ on Vue.js
 
 ## Project setup
 
