@@ -18,7 +18,7 @@ const createArticle = (articleInput) => {
 
 const updateArticle = (slug, articleInput) => {
   return axios
-    .put(`/articles${slug}`, articleInput)
+    .put(`/articles/${slug}`, articleInput)
     .then((response) => response.data.article);
 };
 

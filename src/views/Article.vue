@@ -97,7 +97,7 @@ export default {
           slug: this.$route.params.slug,
         })
         .then(() => {
-          this.$router.push({name: 'feed'});
+          this.$router.push({name: 'globalFeed'});
         });
     },
   },
