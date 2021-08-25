@@ -1,6 +1,6 @@
 # mediumclone_vue
 
-Frontned realisation of https://demo.realworld.io/ on Vue.js
+Frontend realisation of https://demo.realworld.io/ on Vue.js
 
 ## Project setup
 
