@@ -2,7 +2,7 @@
 
 Frontend realisation of https://demo.realworld.io/ on Vue.js
 
-The app is available online at https://vue-medium-clone.surge.sh/
+This app is available at https://vue-medium-clone.surge.sh/
 
 ## Project setup
 
